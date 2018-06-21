@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log ADC_DAC_range_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ADC_DAC_range_test.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log ACD_range_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ACD_range_test.tcl -notrace
 
 

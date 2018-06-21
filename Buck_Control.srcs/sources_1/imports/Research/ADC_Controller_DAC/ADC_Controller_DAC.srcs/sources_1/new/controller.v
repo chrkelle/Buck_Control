@@ -20,8 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module controller(clk, reset, ADC_done, ADC_in, i, control_done,
-            pipe_clk, s0s1_error, s0s1_p_error, s1s2_integ_e, s1s2_delta_e, s1s2_p_error, s2s3_prop_e, s2s3_part_sum, ADC);
+module controller(clk, reset, ADC_done, ADC_in, i, control_done);
 
     //inputs
     input wire clk, reset;
@@ -38,7 +37,7 @@ module controller(clk, reset, ADC_done, ADC_in, i, control_done,
     //state machine
     reg [2:0] state, n_state;
     reg [7:0] count, n_count;
-    output reg pipe_clk;
+    reg pipe_clk;
     reg n_pipe_clk;
     reg [1:0] clk_count, n_clk_count;
         
@@ -46,14 +45,14 @@ module controller(clk, reset, ADC_done, ADC_in, i, control_done,
     reg wr_i_en;
     
     //s3 inputs/s2s3 pipeline reg
-    output reg signed [31:0] s2s3_prop_e, s2s3_part_sum;
+    reg signed [31:0] s2s3_prop_e, s2s3_part_sum;
     reg s2s3_wr_i_en;
     //s3 outputs
     wire signed [31:0] s3_i;
 
     //s2 inputs/s1s2 pipeline reg
-    output reg signed [15:0] s1s2_delta_e, s1s2_p_error;
-    output reg signed [31:0] s1s2_integ_e;
+    reg signed [15:0] s1s2_delta_e, s1s2_p_error;
+    reg signed [31:0] s1s2_integ_e;
     reg s1s2_wr_i_en;
     wire signed [31:0] p_i;
     assign p_i = i;
@@ -61,7 +60,7 @@ module controller(clk, reset, ADC_done, ADC_in, i, control_done,
     wire signed [31:0] s2_prop_e, s2_part_sum;
 
     //s1 inputs/s0s1 pipeline reg
-    output reg signed [15:0] s0s1_error, s0s1_p_error;
+    reg signed [15:0] s0s1_error, s0s1_p_error;
     reg s0s1_wr_i_en;
     
     //s1 outputs
@@ -69,7 +68,7 @@ module controller(clk, reset, ADC_done, ADC_in, i, control_done,
     wire signed [31:0] s1_integ_e;
     
     //s0 inputs/s0s
-    output reg signed [15:0] ADC;
+    reg signed [15:0] ADC;
     wire signed [15:0] ADC_error;
     wire signed [15:0] ADC_ref;
     assign ADC_ref = 230; //(1.8V)

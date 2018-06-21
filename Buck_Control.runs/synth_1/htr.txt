@@ -6,4 +6,4 @@ REM          to be invoked for Vivado to track run status.
 REM Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 REM
 
-vivado -log ADC_DAC_range_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ADC_DAC_range_test.tcl
+vivado -log ACD_range_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ACD_range_test.tcl

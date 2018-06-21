@@ -2,15 +2,27 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buc
 INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/ACD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACD
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/new/ACD_range_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACD_range_test
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/ADC.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ADC
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/new/ADC_DAC_range_test.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ADC_DAC_range_test
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/DAC.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module DAC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/debounce.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stage3
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/sync_reg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sync_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sim_1/new/ADC_DAC_range_test_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ADC_DAC_range_test_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sim_1/new/ACD_range_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACD_range_test_tb

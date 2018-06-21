@@ -20,8 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n, da_p, da_n, db_p, db_n,
-            aclk_p, aclk_n, cnv, tp, tl, ctrl_2_dac, dacclk, done);
+module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n, 
+           da_p, da_n, db_p, db_n, aclk_p, aclk_n, cnv_p, cnv_n, 
+           tp, tl, dacclk, ctrl_2_dac, done);
     
     //system inputs
     input wire clk, reset, start, step_up;
@@ -35,7 +36,7 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n, da_p, da_n, db_p
     //system outputs
     output wire hi_muxsel, done;
     //adc outputs
-    output wire aclk_p, aclk_n, cnv, tp, tl;
+    output wire aclk_p, aclk_n, cnv_p, cnv_n, tp, tl;
     output reg [9:0] ctrl_2_dac;
     //controller outputs
     wire [31:0] i_out;
@@ -55,6 +56,7 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n, da_p, da_n, db_p
     assign hi_muxsel = 0;
     assign done = dac_done;
     assign start_adc = (step_up && ~cold_start_p) || dac_done;
+    assign cnv_n = 0;
     
     //buffers
     
@@ -72,7 +74,7 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n, da_p, da_n, db_p
     
     //module instantiation        
     ADC adc(.clk(clk), .reset(reset), .dco(dco), .da(da),. db(db), .start(start_adc),
-         .aclk(aclk), .cnv(cnv), .tp(tp), .tl(tl), .data(ADC_out), .adc_done(adc_done));
+         .aclk(aclk), .cnv(cnv_p), .tp(tp), .tl(tl), .data(ADC_out), .adc_done(adc_done));
          
     controller control(.clk(clk), .reset(reset), .ADC_done(adc_done), .ADC_in(adc_2_ctrl), .i(i_out),
                  .control_done(control_done));
