@@ -1,0 +1,2 @@
+on_time_counter.vhd,vhdl,xil_defaultlib,../../../../../ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/ip/on_time_counter/sim/on_time_counter.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v
