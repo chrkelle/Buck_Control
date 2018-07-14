@@ -21,7 +21,7 @@
 
 
 module DAC_range_test(sys_clk_p, sys_clk_n, reset_in, hi_muxsel, start, dco_p, dco_n, da_p, da_n, db_p, db_n,
-            aclk_p, aclk_n, cnv_p, cnv_n, tp, tl, data, dacclk, done, clk, ADC_data);
+            aclk_p, aclk_n, cnv_p, cnv_n, tp, tl, data, dacclk, done, clk);
     
     //system inputs
     input wire sys_clk_p, sys_clk_n, reset_in, start;
@@ -40,7 +40,7 @@ module DAC_range_test(sys_clk_p, sys_clk_n, reset_in, hi_muxsel, start, dco_p, d
    
     //system wires 
     wire sys_clk, reset;
-    output reg  [15:0] ADC_data;
+    reg  [15:0] ADC_data;
     reg  [15:0] N_ADC_data;
     //adc wires
     wire da, db, dco, aclk, start_adc, adc_done;
@@ -89,7 +89,7 @@ module DAC_range_test(sys_clk_p, sys_clk_n, reset_in, hi_muxsel, start, dco_p, d
             ADC_data <= 0;
         end
         else begin
-            data <= ADC_data [15:6];
+            data <= {1'b1, ADC_data[15:7]};
             ADC_data <= N_ADC_data;
         end
     end

@@ -95,9 +95,13 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n,
         if(reset) begin
             ctrl_2_dac <= 0;
         end
+        else if(start) begin
+            ctrl_2_dac <= 10'b1111111000;
+        end
         else if(control_done) begin
             ctrl_2_dac <= {1'b1,i_out [18:10]};
         end
+        
     end
     
     always @(posedge clk) begin

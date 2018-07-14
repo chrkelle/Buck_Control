@@ -76,21 +76,23 @@ set_property IOSTANDARD LVDS_25 [get_ports {sys_clk_n}]
 set_property PACKAGE_PIN K4 [get_ports {sys_clk_p}]
 set_property PACKAGE_PIN J4 [get_ports {sys_clk_n}]
 
-# MC1-30 
-set_property PACKAGE_PIN M5 [get_ports {reset_in}]
-set_property IOSTANDARD LVCMOS25 [get_ports {reset_in}]
 
 # MC1-31 
 set_property PACKAGE_PIN L3 [get_ports {done}]
 set_property IOSTANDARD LVCMOS25 [get_ports {done}]
 
-# MC1-32 
-set_property PACKAGE_PIN L5 [get_ports {start}]
-set_property IOSTANDARD LVCMOS25 [get_ports {start}]
 
 # MC1-63 
 set_property PACKAGE_PIN E13 [get_ports {data[5]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {data[5]}]
+
+# MC2-17 
+set_property PACKAGE_PIN N19 [get_ports {reset_in}]
+set_property IOSTANDARD LVCMOS25 [get_ports {reset_in}]
+
+# MC2-19 
+set_property PACKAGE_PIN M15 [get_ports {start}]
+set_property IOSTANDARD LVCMOS25 [get_ports {start}]
 
 # MC2-23 
 set_property PACKAGE_PIN N22 [get_ports {cnv_p}]

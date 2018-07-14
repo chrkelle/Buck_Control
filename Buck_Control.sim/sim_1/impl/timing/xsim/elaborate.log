@@ -1,0 +1,15 @@
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 4eea93bc05934e5cb5d2509f3b83a463 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot ACD_range_test_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.ACD_range_test_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port done on this module [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sim_1/new/ACD_range_test_tb.v:46]
+ERROR: [VRFC 10-2063] Module <IBUFDS> not found while processing module instance <IBUFDS_inst0> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:427]
+ERROR: [VRFC 10-2063] Module <ACD> not found while processing module instance <acd> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:435]
+ERROR: [VRFC 10-2063] Module <OBUF> not found while processing module instance <clk_OBUF_inst> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:453]
+ERROR: [VRFC 10-2063] Module <clk_wiz_0> not found while processing module instance <clk_wiz> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:456]
+ERROR: [VRFC 10-2063] Module <debounce> not found while processing module instance <debunce0> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:498]
+ERROR: [VRFC 10-2063] Module <debounce_0> not found while processing module instance <debunce2> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:503]
+ERROR: [VRFC 10-2063] Module <BUFG> not found while processing module instance <pipe_clk_BUFG_inst> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:510]
+ERROR: [VRFC 10-2063] Module <IBUF> not found while processing module instance <reset_in_IBUF_inst> [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.sim/sim_1/impl/timing/xsim/ACD_range_test_tb_time_impl.v:513]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

@@ -80,21 +80,11 @@ set_property PACKAGE_PIN J4 [get_ports {sys_clk_n}]
 set_property PACKAGE_PIN N13 [get_ports {exp_flg_bar}]
 set_property IOSTANDARD LVCMOS33 [get_ports {exp_flg_bar}]
 
-# MC1-30 
-set_property PACKAGE_PIN M5 [get_ports {reset_in}]
-set_property IOSTANDARD LVCMOS25 [get_ports {reset_in}]
 
 # MC1-31 
 set_property PACKAGE_PIN L3 [get_ports {ctrl_ready_flg}]
 set_property IOSTANDARD LVCMOS25 [get_ports {ctrl_ready_flg}]
 
-# MC1-32 
-set_property PACKAGE_PIN L5 [get_ports {startup_in}]
-set_property IOSTANDARD LVCMOS25 [get_ports {startup_in}]
-
-# MC1-42 
-set_property PACKAGE_PIN K6 [get_ports {step_up_in}]
-set_property IOSTANDARD LVCMOS25 [get_ports {step_up_in}]
 
 # MC1-68 
 set_property PACKAGE_PIN D14 [get_ports {sat_flg}]
@@ -115,6 +105,18 @@ set_property IOSTANDARD LVCMOS33 [get_ports {sw_on}]
 # MC1-76 
 set_property PACKAGE_PIN D16 [get_ports {comp_edge}]
 set_property IOSTANDARD LVCMOS33 [get_ports {comp_edge}]
+
+# MC2-17 
+set_property PACKAGE_PIN N19 [get_ports {reset_in}]
+set_property IOSTANDARD LVCMOS25 [get_ports {reset_in}]
+
+# MC2-18 
+set_property PACKAGE_PIN M20 [get_ports {step_up_in}]
+set_property IOSTANDARD LVCMOS25 [get_ports {step_up_in}]
+
+# MC2-19 
+set_property PACKAGE_PIN M15 [get_ports {startup_in}]
+set_property IOSTANDARD LVCMOS25 [get_ports {startup_in}]
 
 # MC2-23 
 set_property PACKAGE_PIN N22 [get_ports {cnv_p}]

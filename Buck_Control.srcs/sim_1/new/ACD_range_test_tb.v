@@ -43,7 +43,7 @@ module ACD_range_test_tb();
                         .dco_p(dco_p), .dco_n(dco_n), .da_p(da_p), .da_n(da_n), 
                         .db_p(db_p), .db_n(db_n), .aclk_p(aclk_p), .aclk_n(aclk_n),
                         .cnv_p(cnv_p), .cnv_n(cnv_n), .tp(tp), .tl(tl),
-                         .dacclk(dacclk), .ctrl_2_dac(ctrl_2_dac), .done(done), .clk(clk));
+                         .dacclk(dacclk), .ctrl_2_dac(ctrl_2_dac), .clk(clk));
 
     always begin
         #2.5

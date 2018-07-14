@@ -15,5 +15,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==c_addsub_0 || O
 # IP: ip/c_addsub_2/c_addsub_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==c_addsub_2 || ORIG_REF_NAME==c_addsub_2} -quiet] -quiet
 
+# IP: ip/on_time_counter/on_time_counter.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==on_time_counter || ORIG_REF_NAME==on_time_counter} -quiet] -quiet
+
 # IP: ip/clk_wiz_0/clk_wiz_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] -quiet

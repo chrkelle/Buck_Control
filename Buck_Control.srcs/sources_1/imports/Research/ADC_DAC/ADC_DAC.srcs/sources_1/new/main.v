@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 06/15/2018 03:15:58 PM
+// Create Date: 06/05/2018 05:32:55 PM
 // Design Name: 
 // Module Name: main
 // Project Name: 
@@ -20,69 +20,75 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module main(sys_clk_p, sys_clk_n, reset_in, hi_muxsel, start, dco_p, dco_n, da_p, da_n, db_p, db_n,
-            aclk_p, aclk_n, cnv_p, cnv_n, tp, tl, data, dacclk, done, clk);
+module main (sys_clk_p, sys_clk_n, reset_in, startup_in, step_up_in, dacclk, ctrl_2_dac,
+hi_muxsel, comp_edge, sat_flg, sw_on, FF_preset_bar, FF_clear_bar, exp_flg_bar,
+dco_p, dco_n, da_p, da_n, db_p, db_n,
+aclk_p, aclk_n, cnv_p, cnv_n, tp, tl,
+ctrl_ready_flg, clk);
+
+    input wire sys_clk_p, sys_clk_n;
+    input wire reset_in, startup_in, step_up_in;
+    input wire comp_edge; 
+    input wire sat_flg; 
+    input wire dco_p, dco_n;
+    input wire da_p,da_n;
+    input wire db_p,db_n;
     
-    //system inputs
-    input wire sys_clk_p, sys_clk_n, reset_in, start;
-    //adc inputs
-    input wire dco_p, dco_n, da_p, da_n, db_p, db_n;
-    //dac inputs
     
-    //system outputs
-    output wire clk, hi_muxsel, done;
-    //adc outputs
-    output wire aclk_p, aclk_n, cnv_p, cnv_n, tp, tl;
-    output reg [9:0] data;
-    //dac outputs
     output wire dacclk;
-   
-    //system wires 
-    wire sys_clk, reset;
-    reg  [15:0] ADC_data;
-    //adc wires
-    wire da, db, dco, aclk, start_adc, adc_done;
-    wire [15:0] ADC_out;
-    //dac wires
-    wire dac_done;
+    output wire hi_muxsel;
+    output wire [9:0] ctrl_2_dac;
+    
+    output wire aclk_p, aclk_n;
+    output wire cnv_p, cnv_n, tp, tl;
+     
+    output wire sw_on;
+    output wire FF_preset_bar;       
+    output wire FF_clear_bar;
+    output wire exp_flg_bar;
+    
+    output wire clk;
+    output wire ctrl_ready_flg;
+//    output wire [9:0] counter;
+//    output wire [9:0] state;
+//    output wire cntr_load;
+    
+    wire ctrl_start;
+    wire clk_in;
+    wire reset, startup, step_up;
     
     assign hi_muxsel = 0;
-    assign done = dac_done;
-    assign start_adc = start;
-    assign cnv_n = 0;
     
-    //buffers
-    IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("FALSE"),.IOSTANDARD("LVDS_25"))
-    IBUFDS_inst0(.O(sys_clk), .I(sys_clk_p), .IB(sys_clk_n));
+    IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("FALSE"), .IOSTANDARD("LVDS_25")) 
+    IBUFDS_inst0 (.O(clk_in), .I(sys_clk_p), .IB(sys_clk_n));
     
-    IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("FALSE"), .IOSTANDARD("LVDS_25")) // Specify the input I/O standard)
-    IBUFDS_inst1(.O(da), .I(da_p), .IB(da_n));
-            
-    IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("FALSE"), .IOSTANDARD("LVDS_25")) // Specify the input I/O standard)
-    IBUFDS_inst3(.O(db), .I(db_p), .IB(db_n));
+    clk_wiz_0 inst0(.clk_out1(clk), .clk_in1(clk_in));                      
+    
         
-    IBUFDS #(.DIFF_TERM("FALSE"), .IBUF_LOW_PWR("FALSE"), .IOSTANDARD("LVDS_25")) // Specify the input I/O standard)
-    IBUFDS_inst4(.O(dco), .I(dco_p), .IB(dco_n));
-       
-    OBUFDS #(.IOSTANDARD("LVDS_25"))   // Low power="TRUE", Highest performance="FALSE"
-    OBUFDS_inst0(.O(aclk_p), .OB(aclk_n), .I(aclk));
+    debounce   debounce_inst1(.clk(clk), .PB(~startup_in), .PB_state(startup));
+    debounce   debounce_inst2(.clk(clk), .PB(~reset_in), .PB_state(reset));
+    debounce   debounce_inste(.clk(clk), .PB(~step_up_in), .PB_state(step_up));
     
-    //module instantiation
-    clk_wiz_0 clk_wiz(.clk_out1(clk), .clk_in1(sys_clk));
     
-    debounce  debunce(.clk(clk), .PB(~reset_in), .PB_state(reset));
+    cpu cpu_inst (.clk(clk),.rst(reset),
+                    .startup(startup),
+                    .comp_edge(comp_edge),
+                    .sat_flg(sat_flg),
+                    .ctrl_ready_flg(ctrl_ready_flg),
+                    .sw_on(sw_on),
+                    .ctrl_start(ctrl_start),
+                    .FF_preset_bar(FF_preset_bar),
+                    .FF_clear_bar(FF_clear_bar),   
+                    .exp_flg_bar(exp_flg_bar)
+//                    .counter(counter),
+//                    .cntr_load(cntr_load),
+//                    .state(state)
+                    );
+
+    ACD acd_inst(.clk(clk), .reset(reset), .start(startup), .step_up(step_up), .dco_p(dco_p), .dco_n(dco_n)
+    ,.da_p(da_p), .da_n(da_n), .db_p(db_p), .db_n(db_n),.aclk_p(aclk_p), .aclk_n(aclk_n), 
+    .cnv_p(cnv_p), .cnv_n(cnv_n), .tp(tp), .tl(tl), .ctrl_2_dac(ctrl_2_dac), .dacclk(dacclk), .done(ctrl_ready_flg));   
     
-    ADC adc(.clk(clk), .reset(reset), .dco(dco), .da(da),. db(db), .start(start_adc),
-         .aclk(aclk), .cnv(cnv_p), .tp(tp), .tl(tl), .data(ADC_out), .adc_done(adc_done));
-         
-    DAC dac(.clk(clk), .start(adc_done), .reset(reset), .dacclk(dacclk), .dac_done(dac_done));
+
     
-    always @(posedge adc_done, posedge reset) begin
-        if(reset) begin
-            data <= 0;
-        end
-        else begin
-            data <= ADC_out [15:6];
-        end
-    end
 endmodule
