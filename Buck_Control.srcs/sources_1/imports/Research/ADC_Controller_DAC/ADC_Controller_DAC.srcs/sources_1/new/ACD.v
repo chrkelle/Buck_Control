@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n, 
+module ACD(clk, reset, hi_muxsel, start, step_up, ctrl_start, dco_p, dco_n, 
            da_p, da_n, db_p, db_n, aclk_p, aclk_n, cnv_p, cnv_n, 
            tp, tl, dacclk, ctrl_2_dac, done);
     
     //system inputs
-    input wire clk, reset, start, step_up;
+    input wire clk, reset, start, step_up, ctrl_start;
     //adc inputs
     input wire dco_p, dco_n, da_p, da_n, db_p, db_n;
     reg cold_start, cold_start_p;
@@ -48,14 +48,15 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n,
     wire sys_clk;
     reg  [15:0] ADC_data;
     //adc wires
-    wire da, db, dco, aclk, start_adc, adc_done;
+    wire da, db, dco, aclk, start_adc;
+    wire adc_done;
     wire [15:0] ADC_out;
     //dac wires
     wire dac_done;
     
     assign hi_muxsel = 0;
     assign done = dac_done;
-    assign start_adc = (step_up && ~cold_start_p) || dac_done;
+    assign start_adc = (start & ~cold_start_p) || ctrl_start;
     assign cnv_n = 0;
     
     //buffers
@@ -76,7 +77,7 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n,
     ADC adc(.clk(clk), .reset(reset), .dco(dco), .da(da),. db(db), .start(start_adc),
          .aclk(aclk), .cnv(cnv_p), .tp(tp), .tl(tl), .data(ADC_out), .adc_done(adc_done));
          
-    controller control(.clk(clk), .reset(reset), .ADC_done(adc_done), .ADC_in(adc_2_ctrl), .i(i_out),
+    controller control(.clk(clk), .reset(reset), .step_up(step_up),.ADC_done(adc_done), .ADC_in(adc_2_ctrl), .i(i_out),
                  .control_done(control_done));
          
     DAC dac(.clk(clk), .start(control_done), .reset(reset), .dacclk(dacclk), .dac_done(dac_done));
@@ -95,9 +96,9 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n,
         if(reset) begin
             ctrl_2_dac <= 0;
         end
-        else if(start) begin
-            ctrl_2_dac <= 10'b1111111000;
-        end
+        //else if(start & ~step_up) begin
+        //    ctrl_2_dac <= 10'b1011001111;  
+        //end
         else if(control_done) begin
             ctrl_2_dac <= {1'b1,i_out [18:10]};
         end
@@ -109,7 +110,7 @@ module ACD(clk, reset, hi_muxsel, start, step_up, dco_p, dco_n,
             cold_start <= 0;
         end
         else if(~cold_start) 
-            cold_start <= step_up;
+            cold_start <= start;
         
     end
     

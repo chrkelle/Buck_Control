@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module cpu
-# (localparam adc_delay = 1,on_time = 60,sw_off_delay= 120, sw_off_clear= 130, preset_delay = 4)
+# (localparam adc_delay = 1,on_time = 80,sw_off_delay= 140, sw_off_clear= 150, preset_delay = 4)
 (
 input wire clk,rst,
 input wire comp_edge, sat_flg,

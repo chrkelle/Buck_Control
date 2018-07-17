@@ -1031,17 +1031,17 @@ void simulate(char *dp)
 	iki_schedule_processes_at_time_zero(dp, "xsim.dir/ACD_range_test_tb_behav/xsim.reloc");
 	// Initialize Verilog nets in mixed simulation, for the cases when the value at time 0 should be propagated from the mixed language Vhdl net
 
-	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 2374776, dp + 911528, 0, 31, 0, 31, 32, 1);
+	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 2374816, dp + 911568, 0, 31, 0, 31, 32, 1);
 
-	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 1649792, dp + 911864, 0, 31, 0, 31, 32, 1);
+	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 1649832, dp + 911904, 0, 31, 0, 31, 32, 1);
 
-	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 2218184, dp + 911920, 0, 31, 0, 31, 32, 1);
+	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 2218224, dp + 911960, 0, 31, 0, 31, 32, 1);
 
-	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 999752, dp + 912144, 0, 15, 0, 15, 16, 1);
+	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 999792, dp + 912184, 0, 15, 0, 15, 16, 1);
 
-	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 1080800, dp + 912200, 0, 31, 0, 31, 32, 1);
+	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 1080840, dp + 912240, 0, 31, 0, 31, 32, 1);
 
-	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 918376, dp + 912312, 0, 15, 0, 15, 16, 1);
+	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 918416, dp + 912352, 0, 15, 0, 15, 16, 1);
 	iki_execute_processes();
 
 	// Schedule resolution functions for the multiply driven Verilog nets that have strength

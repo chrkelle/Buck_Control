@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module controller(clk, reset, ADC_done, ADC_in, i, control_done);
+module controller(clk, reset, step_up, ADC_done, ADC_in, i, control_done);
 
     //inputs
-    input wire clk, reset;
+    input wire clk, reset, step_up;
     input wire ADC_done;
     input wire signed [15:0] ADC_in;
     output reg signed [31:0] i;
@@ -54,14 +54,19 @@ module controller(clk, reset, ADC_done, ADC_in, i, control_done);
     reg signed [15:0] s1s2_delta_e, s1s2_p_error;
     reg signed [31:0] s1s2_integ_e;
     reg s1s2_wr_i_en;
-    wire signed [31:0] p_i;
+    wire signed [31:0] p_i, kp;
     assign p_i = i;
+    assign kp = step_up ? 20000 : 0;
+    
     //s2 outputs
     wire signed [31:0] s2_prop_e, s2_part_sum;
 
     //s1 inputs/s0s1 pipeline reg
-    reg signed [15:0] s0s1_error, s0s1_p_error;
+    reg signed [15:0] s0s1_error;
+    reg signed [15:0] s0s1_p_error;
+    wire signed [31:0] ki;
     reg s0s1_wr_i_en;
+    assign ki = step_up ? 125 : 5;
     
     //s1 outputs
     wire signed [15:0] s1_delta_e;
@@ -71,13 +76,13 @@ module controller(clk, reset, ADC_done, ADC_in, i, control_done);
     reg signed [15:0] ADC;
     wire signed [15:0] ADC_error;
     wire signed [15:0] ADC_ref;
-    assign ADC_ref = 230; //(1.8V)
+    assign ADC_ref = step_up ? 231 : 225; //(1.8V)
     //output reg signed [31:0] p_error;
     
     //s0 outputs    
     stage0 s0(.clk(clk), .ADC_val(ADC), .ADC_ref(ADC_ref), .ADC_error(ADC_error));
-    stage1 s1(.clk(clk), .error(s0s1_error), .p_error(s1s2_p_error), .delta_e(s1_delta_e), .integ_e(s1_integ_e));
-    stage2 s2(.clk(clk), .delta_e(s1s2_delta_e), .integ_e(s1s2_integ_e), .p_i(p_i), .prop_e(s2_prop_e), .part_sum(s2_part_sum));
+    stage1 s1(.clk(clk), .ki(ki), .error(s0s1_error), .p_error(s1s2_p_error), .delta_e(s1_delta_e), .integ_e(s1_integ_e));
+    stage2 s2(.clk(clk), .kp(kp), .delta_e(s1s2_delta_e), .integ_e(s1s2_integ_e), .p_i(p_i), .prop_e(s2_prop_e), .part_sum(s2_part_sum));
     stage3 s3(.clk(clk), .prop_e(s2s3_prop_e), .part_sum(s2s3_part_sum), .i(s3_i));  
     
       

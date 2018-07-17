@@ -19,15 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module stage1(clk, error, p_error, delta_e, integ_e);
+module stage1(clk, ki, error, p_error, delta_e, integ_e);
     
     input clk;
     input [15:0] error, p_error;
+    input wire signed [31:0] ki;
     output wire [15:0] delta_e;
     output wire [31:0] integ_e;
-      
-    wire [31:0] ki = 200;
-    
+          
     c_addsub_0 sub (
       .A(error),      // input wire [16 : 0] A
       .B(p_error),    // input wire [16 : 0] B

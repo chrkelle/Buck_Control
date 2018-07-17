@@ -24,7 +24,7 @@ module main (sys_clk_p, sys_clk_n, reset_in, startup_in, step_up_in, dacclk, ctr
 hi_muxsel, comp_edge, sat_flg, sw_on, FF_preset_bar, FF_clear_bar, exp_flg_bar,
 dco_p, dco_n, da_p, da_n, db_p, db_n,
 aclk_p, aclk_n, cnv_p, cnv_n, tp, tl,
-ctrl_ready_flg, clk);
+ctrl_ready_flg, clk, step_up);
 
     input wire sys_clk_p, sys_clk_n;
     input wire reset_in, startup_in, step_up_in;
@@ -49,13 +49,16 @@ ctrl_ready_flg, clk);
     
     output wire clk;
     output wire ctrl_ready_flg;
+    output wire step_up;
 //    output wire [9:0] counter;
 //    output wire [9:0] state;
 //    output wire cntr_load;
+
+//*************************
     
     wire ctrl_start;
     wire clk_in;
-    wire reset, startup, step_up;
+    wire reset, startup;
     
     assign hi_muxsel = 0;
     
@@ -85,9 +88,10 @@ ctrl_ready_flg, clk);
 //                    .state(state)
                     );
 
-    ACD acd_inst(.clk(clk), .reset(reset), .start(startup), .step_up(step_up), .dco_p(dco_p), .dco_n(dco_n)
+    ACD acd_inst(.clk(clk), .reset(reset), .start(startup), .step_up(step_up), .ctrl_start(ctrl_start), .dco_p(dco_p), .dco_n(dco_n)
     ,.da_p(da_p), .da_n(da_n), .db_p(db_p), .db_n(db_n),.aclk_p(aclk_p), .aclk_n(aclk_n), 
-    .cnv_p(cnv_p), .cnv_n(cnv_n), .tp(tp), .tl(tl), .ctrl_2_dac(ctrl_2_dac), .dacclk(dacclk), .done(ctrl_ready_flg));   
+    .cnv_p(cnv_p), .cnv_n(cnv_n), .tp(tp), .tl(tl), .ctrl_2_dac(ctrl_2_dac), .dacclk(dacclk), 
+    .done(ctrl_ready_flg));   
     
 
     

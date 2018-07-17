@@ -20,14 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module stage2(clk, delta_e, integ_e, p_i, prop_e, part_sum);
+module stage2(clk, kp, delta_e, integ_e, p_i, prop_e, part_sum);
     input clk;
     input [15:0] delta_e;
     input [31:0] integ_e, p_i;
+    input wire signed [31:0] kp;
     output wire [31:0] prop_e, part_sum;
-    
-    wire [31:0] kp = 2000;
-    
+        
     mult_gen_0 mult (
           .CLK(clk),    // input wire CLK
           .A(delta_e),  // input wire [15 : 0] A
