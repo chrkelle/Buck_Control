@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10892 
+INFO: Helper process launched with PID 4912 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 446.102 ; gain = 100.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 445.707 ; gain = 99.480
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/main.v:23]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:19487]
@@ -28,8 +28,8 @@ INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2018.1/scrip
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:19487]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/debounce.v:23]
 	Parameter DELAY bound to: 24'b000000000000001111101000 
 INFO: [Synth 8-6155] done synthesizing module 'debounce' (3#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/debounce.v:23]
@@ -47,8 +47,8 @@ INFO: [Synth 8-6157] synthesizing module 'cpu' [C:/Users/Chris/Desktop/Research/
 	Parameter s5 bound to: 10'b0000010000 
 	Parameter s6 bound to: 10'b0000100000 
 INFO: [Synth 8-5534] Detected attribute (* FSM_ENCODING = "ONE-HOT" *) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/new/cpu.v:42]
-INFO: [Synth 8-6157] synthesizing module 'on_time_counter' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/on_time_counter_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'on_time_counter' (4#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/on_time_counter_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'on_time_counter' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/on_time_counter_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'on_time_counter' (4#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/on_time_counter_stub.v:6]
 WARNING: [Synth 8-6014] Unused sequential element comp_edge_p_reg was removed.  [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/new/cpu.v:73]
 INFO: [Synth 8-6155] done synthesizing module 'cpu' (5#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/new/cpu.v:21]
 INFO: [Synth 8-6157] synthesizing module 'ACD' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/ACD.v:23]
@@ -67,18 +67,18 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Chri
 INFO: [Synth 8-6155] done synthesizing module 'ADC' (8#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_DAC/ADC_DAC.srcs/sources_1/new/ADC.v:27]
 INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/controller.v:23]
 INFO: [Synth 8-6157] synthesizing module 'stage0' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage0.v:23]
-INFO: [Synth 8-6157] synthesizing module 'c_addsub_2' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/c_addsub_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_addsub_2' (9#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/c_addsub_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_addsub_2' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/c_addsub_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_addsub_2' (9#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/c_addsub_2_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'stage0' (10#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage0.v:23]
 INFO: [Synth 8-6157] synthesizing module 'stage1' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage1.v:22]
-INFO: [Synth 8-6157] synthesizing module 'c_addsub_0' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/c_addsub_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_addsub_0' (11#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/c_addsub_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mult_gen_0' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/mult_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mult_gen_0' (12#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/mult_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_addsub_0' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/c_addsub_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_addsub_0' (11#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/c_addsub_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mult_gen_0' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/mult_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult_gen_0' (12#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/mult_gen_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'stage1' (13#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage1.v:22]
 INFO: [Synth 8-6157] synthesizing module 'stage2' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage2.v:23]
-INFO: [Synth 8-6157] synthesizing module 'c_addsub_1' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/c_addsub_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'c_addsub_1' (14#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9064-DESKTOP-EPHBFNF/realtime/c_addsub_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_addsub_1' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/c_addsub_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_addsub_1' (14#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/.Xil/Vivado-9804-DESKTOP-EPHBFNF/realtime/c_addsub_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'stage2' (15#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage2.v:23]
 INFO: [Synth 8-6157] synthesizing module 'stage3' [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage3.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'stage3' (16#1) [C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.srcs/sources_1/imports/Research/ADC_Controller_DAC/ADC_Controller_DAC.srcs/sources_1/new/stage3.v:23]
@@ -98,7 +98,7 @@ WARNING: [Synth 8-3331] design controller has unconnected port ADC_in[2]
 WARNING: [Synth 8-3331] design controller has unconnected port ADC_in[1]
 WARNING: [Synth 8-3331] design controller has unconnected port ADC_in[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 500.695 ; gain = 154.680
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 501.359 ; gain = 155.133
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -111,10 +111,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 500.695 ; gain = 154.680
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 501.359 ; gain = 155.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 500.695 ; gain = 154.680
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 501.359 ; gain = 155.133
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -204,7 +204,7 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 836.676 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 837.043 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'acd_inst/control/s0/add' at clock pin 'CLK' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'acd_inst/control/s1/mult' at clock pin 'CLK' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'acd_inst/control/s1/sub' at clock pin 'CLK' is different from the actual clock period '2.500', this can lead to different synthesis results.
@@ -213,14 +213,14 @@ WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context 
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'acd_inst/control/s3/add' at clock pin 'CLK' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'cpu_inst/on_time_counter_inst' at clock pin 'CLK' is different from the actual clock period '2.500', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 836.676 ; gain = 490.660
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 837.043 ; gain = 490.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a50tfgg484-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 836.676 ; gain = 490.660
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 837.043 ; gain = 490.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -234,7 +234,7 @@ Applied set_property DONT_TOUCH = true for acd_inst/control/s0/add. (constraint 
 Applied set_property DONT_TOUCH = true for cpu_inst/on_time_counter_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 836.676 ; gain = 490.660
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 837.043 ; gain = 490.816
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "sw_on" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FF_clear" won't be mapped to RAM because it is too sparse
@@ -278,7 +278,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'DAC'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 836.676 ; gain = 490.660
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 837.043 ; gain = 490.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -323,8 +323,8 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 4     
 	   3 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 14    
-	   8 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 15    
+	   8 Input      1 Bit        Muxes := 11    
 	   6 Input      1 Bit        Muxes := 6     
 	   3 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 3     
@@ -354,8 +354,8 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   8 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 11    
+	   8 Input      1 Bit        Muxes := 11    
 Module sync_reg 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -471,7 +471,7 @@ WARNING: [Synth 8-3332] Sequential element (acd_inst/adc_2_ctrl_reg[2]) is unuse
 WARNING: [Synth 8-3332] Sequential element (acd_inst/adc_2_ctrl_reg[1]) is unused and will be removed from module main.
 WARNING: [Synth 8-3332] Sequential element (acd_inst/adc_2_ctrl_reg[0]) is unused and will be removed from module main.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 836.676 ; gain = 490.660
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 837.043 ; gain = 490.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -487,13 +487,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'inst0/clk_out1' to pin 'i
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'inst0/clk_in1' to 'IBUFDS_inst0/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 836.676 ; gain = 490.660
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 837.043 ; gain = 490.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 847.789 ; gain = 501.773
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 847.281 ; gain = 501.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -505,7 +505,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -529,7 +529,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -542,7 +542,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -554,25 +554,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -618,12 +618,12 @@ Report Cell Usage:
 |8     |on_time_counter |     1|
 |9     |BUFG            |     1|
 |10    |CARRY4          |    28|
-|11    |LUT1            |     8|
+|11    |LUT1            |     9|
 |12    |LUT2            |    55|
-|13    |LUT3            |    45|
-|14    |LUT4            |    27|
-|15    |LUT5            |    23|
-|16    |LUT6            |    45|
+|13    |LUT3            |    44|
+|14    |LUT4            |    22|
+|15    |LUT5            |    20|
+|16    |LUT6            |    51|
 |17    |SRL16E          |     2|
 |18    |FDCE            |   228|
 |19    |FDPE            |     1|
@@ -639,7 +639,7 @@ Report Instance Areas:
 +------+-----------------+-----------+------+
 |      |Instance         |Module     |Cells |
 +------+-----------------+-----------+------+
-|1     |top              |           |   823|
+|1     |top              |           |   821|
 |2     |  acd_inst       |ACD        |   605|
 |3     |    adc          |ADC        |    67|
 |4     |      sync       |sync_reg   |    13|
@@ -649,17 +649,17 @@ Report Instance Areas:
 |8     |      s2         |stage2     |    64|
 |9     |      s3         |stage3     |    72|
 |10    |    dac          |DAC        |    21|
-|11    |  cpu_inst       |cpu        |    54|
+|11    |  cpu_inst       |cpu        |    52|
 |12    |  debounce_inst1 |debounce   |    44|
 |13    |  debounce_inst2 |debounce_0 |    45|
 |14    |  debounce_inste |debounce_1 |    44|
 +------+-----------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 849.445 ; gain = 503.219
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 849.941 ; gain = 167.945
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 849.941 ; gain = 503.926
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 849.445 ; gain = 167.535
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 849.445 ; gain = 503.219
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -671,8 +671,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 100 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 849.941 ; gain = 515.398
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 849.445 ; gain = 514.691
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Chris/Desktop/Research/Buck_Control/Buck_Control.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 849.941 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 17 11:59:13 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 849.445 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 20 10:07:57 2018...

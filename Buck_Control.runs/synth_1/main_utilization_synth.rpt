@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Tue Jul 17 11:59:13 2018
+| Date         : Fri Jul 20 10:07:57 2018
 | Host         : DESKTOP-EPHBFNF running 64-bit major release  (build 9200)
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  174 |     0 |     32600 |  0.53 |
-|   LUT as Logic             |  172 |     0 |     32600 |  0.53 |
+| Slice LUTs*                |  173 |     0 |     32600 |  0.53 |
+|   LUT as Logic             |  171 |     0 |     32600 |  0.52 |
 |   LUT as Memory            |    2 |     0 |      9600 |  0.02 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    2 |     0 |           |       |
@@ -154,13 +154,13 @@ Table of Contents
 | FDCE     |  228 |        Flop & Latch |
 | FDRE     |  154 |        Flop & Latch |
 | LUT2     |   55 |                 LUT |
-| LUT6     |   45 |                 LUT |
-| LUT3     |   45 |                 LUT |
+| LUT6     |   51 |                 LUT |
+| LUT3     |   44 |                 LUT |
 | CARRY4   |   28 |          CarryLogic |
-| LUT4     |   27 |                 LUT |
 | OBUF     |   23 |                  IO |
-| LUT5     |   23 |                 LUT |
-| LUT1     |    8 |                 LUT |
+| LUT4     |   22 |                 LUT |
+| LUT5     |   20 |                 LUT |
+| LUT1     |    9 |                 LUT |
 | IBUF     |    5 |                  IO |
 | IBUFDS   |    4 |                  IO |
 | SRL16E   |    2 |  Distributed Memory |

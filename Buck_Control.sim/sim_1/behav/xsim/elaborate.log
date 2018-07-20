@@ -1,6 +1,6 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 4eea93bc05934e5cb5d2509f3b83a463 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xil_defaultlib -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L c_gate_bit_v12_0_5 -L xbip_counter_v3_0_5 -L c_counter_binary_v12_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot main_tb_behav xil_defaultlib.main_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 4eea93bc05934e5cb5d2509f3b83a463 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xil_defaultlib -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L c_gate_bit_v12_0_5 -L xbip_counter_v3_0_5 -L c_counter_binary_v12_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot boost_tb_behav xil_defaultlib.boost_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -38,6 +38,7 @@ Compiling module unisims_ver.BUFG
 Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
 Compiling module xil_defaultlib.clk_wiz_0
 Compiling module xil_defaultlib.debounce
+Compiling module xil_defaultlib.sync_dout
 Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=10...]
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
@@ -48,7 +49,7 @@ Compiling architecture synth of entity c_counter_binary_v12_0_12.c_counter_binar
 Compiling architecture synth of entity c_counter_binary_v12_0_12.c_counter_binary_v12_0_12_viv [\c_counter_binary_v12_0_12_viv(c...]
 Compiling architecture xilinx of entity c_counter_binary_v12_0_12.c_counter_binary_v12_0_12 [\c_counter_binary_v12_0_12(c_xde...]
 Compiling architecture on_time_counter_arch of entity xil_defaultlib.on_time_counter [on_time_counter_default]
-Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.boost_cpu
 Compiling module unisims_ver.OBUFDS(IOSTANDARD="LVDS_25")
 Compiling module xil_defaultlib.sync_reg
 Compiling module xil_defaultlib.ADC
@@ -101,10 +102,10 @@ Compiling architecture xilinx of entity c_addsub_v12_0_12.c_addsub_v12_0_12 [\c_
 Compiling architecture c_addsub_1_arch of entity xil_defaultlib.c_addsub_1 [c_addsub_1_default]
 Compiling module xil_defaultlib.stage2
 Compiling module xil_defaultlib.stage3
-Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.boost_controller
 Compiling module xil_defaultlib.DAC
-Compiling module xil_defaultlib.ACD
-Compiling module xil_defaultlib.main
-Compiling module xil_defaultlib.main_tb
+Compiling module xil_defaultlib.boost_ACD
+Compiling module xil_defaultlib.boost
+Compiling module xil_defaultlib.boost_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot main_tb_behav
+Built simulation snapshot boost_tb_behav

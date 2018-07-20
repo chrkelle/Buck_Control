@@ -100,7 +100,7 @@ assign exp_flg_bar = ~exp_flg;
          else 
              cntr_load <= 1'b1;       
                     
-         sw_on <= 1'b0; 
+         // sw_on <= 1'b0; 
          FF_clear <= 1'b0;
          FF_clear_reg <= 8'b00000000;
          FF_preset <= 1'b1; 
@@ -194,6 +194,8 @@ assign exp_flg_bar = ~exp_flg;
             state <= s0;
         else
             state<=s6;
+            
+            sw_on <= 1'b1;
  // edge detection       
         if (comp_edge)     
           cntr_load <= 1'b1;
